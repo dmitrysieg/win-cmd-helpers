@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open cmd.exe]
+@="Open cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open cmd.exe\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open cmd.exe as Administrator]
+@="Open cmd.exe as Administrator"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open cmd.exe as Administrator\command]
+@="powershell -Command \"Start-Process cmd -ArgumentList '/s /k pushd \\\"%V\\\"' -Verb RunAs\""
+
